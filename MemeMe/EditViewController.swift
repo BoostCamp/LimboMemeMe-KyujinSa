@@ -116,7 +116,6 @@ class EditViewController: UIViewController, UITextFieldDelegate ,UIImagePickerCo
 
     //텍스트 부분이 수정되었는지 파악한뒤 세이브버튼 활성화
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("나호출")
         if topTextField.text != self.memes?[indexNumber!].topText || bottomTextField.text != self.memes?[indexNumber!].bottomText{
             self.saveButton.isEnabled = true
         }
@@ -197,7 +196,6 @@ class EditViewController: UIViewController, UITextFieldDelegate ,UIImagePickerCo
 
     //기존 미미 구조체 새로 저장 부분
     func save() {
-        print("저장부분")
         //미미 사진 저장
         let memedImage = generateMemedImage()
         meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: originalImage.image!, memedImage: memedImage)

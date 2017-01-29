@@ -100,16 +100,7 @@ class ViewController: UIViewController, UITextFieldDelegate ,UIImagePickerContro
     
     //미미 사진 추가 취소 액션
     @IBAction func cancelButtonClicked(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true) { () in
-            
-            let alert = UIAlertController(title: "", message: "이미지 확인창", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-           
-            
-        }
-
+        self.presentingViewController?.dismiss(animated: true) 
     }
     
     //배터리 부분 안보이게 감추는 프로퍼티
